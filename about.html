@@ -151,62 +151,171 @@
       <div class="col-12 pt-lg-3 mb-4 px-4 page-content">
         <link rel="stylesheet" type="text/css"
           href="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/css/lightgallery.min.css" />
-        <div class=".article-gallery">
-          <p class="justified-text">
-            <img src="/images/About/About-Me.png" alt="About Me Image"
-              style="width: 21vw; height: auto; float: left; margin-right: 30px;">
-            Hello and welcome! I'm Ruohan(Kerry) Lu, a gameplay programmer currently pursuing a Master's degree in Game
-            Design, Development
-            &
-            Innovation at Duke University.
-            <br>
-            <br>
-            I have nearly two years of experience in the game industry, having worked as a gameplay development intern
-            at
-            Giant
-            Interactive, where I contributed to the game Night of the Full Moon.
-
-            With around five years of game development experience, I am proficient in game engines like Unreal and Unity
-            Engine,
-            programming languages including C++, C# and Lua, and DCC tools like Houdini, Maya and Blender. I have worked
-            on multiple game
-            projects, both
-            independently and in diverse teams, developing a deep passion for creating immersive gameplay experiences.
-
-            I look forward to pushing the boundaries of interactive entertainment and crafting engaging games that bring
-            joy to
-            players worldwide!
-
-            <br>
-            <br>
-            In leisure time, I enjoy running, cycling, badminton and rock climbing. Feel free to look around
-            and reach out. :)
-          </p>
-          <div class="row">
-            <div class="col-12 text-center">
-              <a href="https://drive.google.com/file/d/1aJc-WvqQWe9g6zUgWe_e1o0B2h9YNIbm/view?usp=sharingL"
-                class="rounded-button">Resume</a>
+        <div class="article-gallery">
+          <div class="content-container">
+            <img src="/images/About/About-Me.png" alt="About Me Image" class="profile-image">
+            <div class="text-content">
+              <p class="justified-text">
+                Hello and welcome! I'm Ruohan (Kerry) Lu, a gameplay programmer currently pursuing a Master's degree in
+                Game
+                Design, Development & Innovation at Duke University.
+              </p>
+              <p>
+                I have nearly two years of experience in the game industry, having worked as a gameplay development
+                intern at
+                Giant Interactive, where I contributed to the game <i>Night of the Full Moon</i>.
+              </p>
+              <p>
+                With around five years of game development experience, I am proficient in game engines like Unreal and
+                Unity
+                Engine,
+                programming languages including C++, C#, and Lua, and DCC tools like Houdini, Maya, and Blender. I have
+                worked
+                on multiple game projects, both independently and in diverse teams, developing a deep passion for
+                creating
+                immersive gameplay experiences.
+              </p>
+              <p>
+                I look forward to pushing the boundaries of interactive entertainment and crafting engaging games that
+                bring
+                joy to players worldwide!
+              </p>
+              <p>
+                In leisure time, I enjoy running, cycling, badminton, and rock climbing. Feel free to look around and
+                reach out.
+                :)
+              </p>
             </div>
           </div>
+          <div class="resume-container">
+            <a href="https://drive.google.com/file/d/1aJc-WvqQWe9g6zUgWe_e1o0B2h9YNIbm/view?usp=sharing"
+              class="rounded-button">
+              Resume
+            </a>
+          </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script>
-        <script src="https://github.com/sachinchoolur/lg-thumbnail.js"></script>
-        <script src="https://github.com/sachinchoolur/lg-zoom.js"></script>
-        <script src="https://github.com/sachinchoolur/lg-autoplay.js"></script>
-        <script src="https://github.com/sachinchoolur/lg-fullscreen.js"></script>
-        <script src="https://github.com/sachinchoolur/lg-pager.js"></script>
-        <script src="https://github.com/sachinchoolur/lg-video.js"></script>
-        <script src="https://github.com/sachinchoolur/lg-hash.js"></script>
-        <script>if (typeof lightGallery !== 'undefined') {
-            var options = {
-              selector: '.gallery-item'
-            };
-            lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
-          }</script>
+
+
+        <style>
+          /* 新增的响应式样式 */
+          .article-gallery {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 2rem 5%;
+          }
+
+          .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+
+          .profile-image {
+            flex: 0 1 300px;
+            min-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          }
+
+          .text-content {
+            flex: 1 1 55%;
+            min-width: 300px;
+          }
+
+          .resume-container {
+            width: 100%;
+            text-align: center;
+            margin: 0.8rem auto;
+            padding: 0;
+          }
+
+          .rounded-button {
+            /* 新增文字居中属性 */
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 原有样式保持不变 */
+            padding: 14px 40px;
+            background-color: #1b4a6a;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            border: 2px solid #1B4F72;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+            /* 新增确保文字对齐的属性 */
+            text-align: center;
+            vertical-align: middle;
+            line-height: 1;
+          }
+
+          .rounded-button:hover {
+            background-color: #1B4F72;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+          }
+
+          @media (max-width: 768px) {
+            .content-container {
+              flex-direction: column;
+            }
+
+            .profile-image {
+              width: 70%;
+              margin: 0 auto;
+            }
+
+            .resume-container {
+              margin: 2rem auto;
+            }
+
+            .rounded-button {
+              padding: 12px 35px;
+              font-size: 1rem;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .profile-image {
+              width: 100%;
+            }
+
+            .rounded-button {
+              width: 90%;
+              max-width: 220px;
+            }
+          }
+        </style>
       </div>
 
-
     </div>
+    <script src="https://cdn.jsdelivr.net/lightgallery.js/1.0.1/js/lightgallery.min.js"></script>
+    <script src="https://github.com/sachinchoolur/lg-thumbnail.js"></script>
+    <script src="https://github.com/sachinchoolur/lg-zoom.js"></script>
+    <script src="https://github.com/sachinchoolur/lg-autoplay.js"></script>
+    <script src="https://github.com/sachinchoolur/lg-fullscreen.js"></script>
+    <script src="https://github.com/sachinchoolur/lg-pager.js"></script>
+    <script src="https://github.com/sachinchoolur/lg-video.js"></script>
+    <script src="https://github.com/sachinchoolur/lg-hash.js"></script>
+    <script>if (typeof lightGallery !== 'undefined') {
+        var options = {
+          selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options);
+      }</script>
+  </div>
+
+
+  </div>
 
   </div>
 

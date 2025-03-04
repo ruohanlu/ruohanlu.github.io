@@ -102,31 +102,132 @@ if (typeof lightGallery !== &#39;undefined&#39;) {
       </div>
     </nav>
 
-    <div class="contact-info">
-      <p class="info-paragraph">
-        &nbsp;&nbsp;Feel free to contact me about any opportunity, or just to chat about gamedev, coding, or anything
-        else :)
+    <div class="contact-section">
+      <p class="contact-description">
+        Feel free to contact me about any opportunity, or just to chat about gamedev, coding, or anything else :)
       </p>
-      <ul>
-        <li class="info-item">
-          <img src="/images/Contact/person.png" alt="Website 1 Logo" class="website-logo" />
-          <a href="http://ruohanlu.github.io" target="_blank" class="info-link">ruohanlu.github.io</a>
+
+      <ul class="contact-list">
+        <li class="contact-item">
+          <div class="contact-link">
+            <img src="/images/Contact/person.png" alt="Portfolio icon" class="contact-icon" />
+            <a href="http://ruohanlu.github.io" target="_blank" rel="noopener"
+              class="contact-text">ruohanlu.github.io</a>
+          </div>
         </li>
-        <li class="info-item">
-          <img src="/images/Contact/email.png" alt="Website 1 Logo" class="website-logo" />
-          <a href="mailto:ruohanlew@gmail.com" target="_blank" class="info-link">ruohanlew@gmail.com</a>
+
+        <li class="contact-item">
+          <div class="contact-link">
+            <img src="/images/Contact/email.png" alt="Email icon" class="contact-icon" />
+            <a href="mailto:ruohanlew@gmail.com" class="contact-text">ruohanlew@gmail.com</a>
+          </div>
         </li>
-        <li class="info-item">
-          <img src="/images/Contact/linkedin.png" alt="Website 1 Logo" class="website-logo" />
-          <a href="https://www.linkedin.com/in/ruohan-lu/" target="_blank"
-            class="info-link">linkedin.com/in/ruohan-lu/</a>
+
+        <li class="contact-item">
+          <div class="contact-link">
+            <img src="/images/Contact/linkedin.png" alt="LinkedIn icon" class="contact-icon" />
+            <a href="https://www.linkedin.com/in/ruohan-lu/" target="_blank" rel="noopener"
+              class="contact-text">linkedin.com/in/ruohan-lu/</a>
+          </div>
         </li>
-        <li class="info-item">
-          <img src="/images/Contact/github.png" alt="Website 1 Logo" class="website-logo" />
-          <a href="https://github.com/RuohanLu" target="_blank" class="info-link">github.com/RuohanLu</a>
+
+        <li class="contact-item">
+          <div class="contact-link">
+            <img src="/images/Contact/github.png" alt="GitHub icon" class="contact-icon" />
+            <a href="https://github.com/RuohanLu" target="_blank" rel="noopener"
+              class="contact-text">github.com/RuohanLu</a>
+          </div>
         </li>
       </ul>
     </div>
+
+    <style>
+      .contact-section {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+      }
+
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .contact-item {
+        margin-bottom: 1rem;
+      }
+
+      .contact-link {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 0.8rem 1.2rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contact-icon-container {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f5f7fa;
+        border-radius: 6px;
+      }
+
+      .contact-icon {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      .contact-text {
+        color: #2d3748;
+        font-weight: 500;
+        font-size: 1rem;
+        flex-grow: 1;
+        min-width: 0;
+        /* 允许文本截断 */
+      }
+
+      @media (max-width: 768px) {
+        .contact-section {
+          padding: 0 1rem;
+        }
+
+        .contact-link {
+          padding: 0.8rem 1rem;
+          gap: 1rem;
+        }
+
+        .contact-icon {
+          width: 24px;
+          height: 24px;
+        }
+
+        .contact-text {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .contact-description {
+          text-indent: 1em;
+          font-size: 1rem;
+        }
+
+        .contact-link {
+          gap: 0.8rem;
+          padding: 0.8rem;
+        }
+      }
+    </style>
 
 
 
